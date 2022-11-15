@@ -1,0 +1,38 @@
+.footer {
+    background: url(../../assets/image/ft-bg.jpg);
+    color: #abb7c4;
+    a {
+        color: #abb7c4;
+        display: block;
+        text-decoration: none;
+        margin-bottom: 12px;
+        &:hover {
+            color: var(--colorSecondary0);
+            text-decoration: none;
+        }
+    }
+    i {
+        margin-right: 8px;
+    }
+    &-desc {
+        text-align: justify;
+    }
+    &-content {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    &-logo {
+        margin-bottom: 15px;
+    }
+    &-copyright {
+        border-top: 1px solid #405266;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        background-color: rgba(2, 13, 24, 0.7);
+    }
+}
+@media (min-width: 768px) {
+    .footer-desc {
+        margin-right: 15px;
+    }
+}

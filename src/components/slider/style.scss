@@ -1,0 +1,96 @@
+.banner-slider {
+    &-item {
+        position: relative;
+        margin-left: -10px;
+        margin-right: 10px;
+    }
+    &-content {
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+        &:hover {
+            .banner-slider-image {
+                &::before {
+                    opacity: 0.7;
+                    visibility: visible;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+    
+    &-image {
+        position: relative;
+        &::before {
+            content: '';
+            background-color: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+            transform: scale(0);
+        }
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    &-overlay {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    &-time {
+        background-color: var(--colorThird);
+        display: inline-block;
+        text-align: center;
+        padding: 3px 5px;
+        border-radius: 3px;
+    }
+
+    &-title {
+        text-transform: capitalize;
+        margin-top: 15px;
+        font-size: 18px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:hover {
+            color: var(--colorThird);
+        }
+    }
+
+    &-star {
+        font-size: 12px;
+        font-weight: 600;
+        i {
+            font-size: 22px;
+            color: var(--colorSecondary);
+        }
+        span {
+            font-size: 18px;
+        }
+    }
+
+    .slick-dots {
+        bottom: -35px !important;
+        width: 60px !important;
+        right: -15px;
+        li {
+            button:before {
+                font-size: 12px;
+            }
+        }
+    }
+}

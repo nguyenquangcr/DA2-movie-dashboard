@@ -1,0 +1,141 @@
+.booking {
+    position: relative;
+    overflow: hidden;
+    &-screen {
+        background-color: var(--colorThird);
+        color: #fff;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+        width: 90%;
+        height: 80px;
+        line-height: 80px;
+        margin: 0 auto 50px;
+        border-radius: 8px;
+    }
+    &-seat {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -3px;
+        margin-right: -3px;
+        &-item {
+            padding-left: 3px;
+            padding-right: 3px;
+            flex: 0 0 16.6666666667%;
+            span {
+                color: #fff;
+                max-width: 100%;
+                min-height: 32px;
+                line-height: 32px;
+                margin-bottom: 8px;
+                border-radius: 4px;
+                text-align: center;
+                display: block;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &-seat {
+        &-normal {
+            span {
+                background-color: var(--colorThird);
+            }
+        }
+        &-vip {
+            span {
+                background-color: var(--colorSecondary);
+                color: var(--colorPrimary);
+            }
+        }
+        &-selected {
+            span {
+                background-color: var(--colorSelected);
+            }
+        }
+        &-booked {
+            span {
+                background-color: var(--colorBooked);
+                pointer-events: none;
+                opacity: 0.5;
+            }
+        }
+    }
+    &-type {
+        &-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            color: #abb7c4;
+            span {
+                border-radius: 5px;
+                min-width: 35px;
+                min-height: 16px;
+                margin-right: 8px;
+                display: inline-block;
+            }
+        }
+    }
+    &-type {
+        &-normal {
+            background-color: var(--colorThird);
+        }
+        &-vip {
+            background-color: var(--colorSecondary);
+            color: var(--colorPrimary);
+        }
+        &-selected {
+            background-color: var(--colorSelected);
+        }
+        &-booked {
+            background-color: var(--colorBooked);
+        }
+    }
+    &-info {
+        &-image {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        &-item {
+            color: #4280bf;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            span {
+                color: #abb7c4;
+                font-weight: 600;
+            }
+        }
+    }
+    &-btn {
+        text-align: center;
+        margin-top: 25px;
+        span {
+            background-color: var(--colorThird);
+            color: #fff;
+            border-radius: 20px;
+            padding: 9px 60px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .booking {
+        &-screen {
+            width: 70%;
+        }
+        &-seat {
+            &-item {
+                flex: 0 0 10%;
+            }
+        }
+        &-info {
+            &-image {
+                margin-top: 0;
+            }
+        }
+    }
+}

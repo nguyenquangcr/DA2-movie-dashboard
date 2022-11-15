@@ -1,0 +1,194 @@
+.booking {
+    color: #abb7c4;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    &-container {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    &-cinema,
+    &-location,
+    &-movielist {
+        border: 1px solid #405266;
+    }
+    &-cinema {
+        position: relative;
+        z-index: 1;
+        &-item {
+            position: relative;
+            text-align: center;
+            padding: 15px;
+            height: 90px;
+            opacity: 0.5;
+            cursor: pointer;
+            img {
+                height: 60px;
+            }
+            &:hover,
+            &.active {
+                opacity: 1;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+    &-location {
+        &-item {
+            padding: 8px 15px;
+            opacity: 0.5;
+            cursor: pointer;
+            &:hover,
+            &.active {
+                opacity: 1;
+            }
+        }
+        &-title {
+            color: var(--colorSecondary);
+            text-transform: capitalize;
+        }
+        &-desc {
+            color: #9b9b9b;
+            font-size: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            &.active {
+                overflow: initial;
+                text-overflow: initial;
+                white-space: initial;
+            }
+        }
+        &-detail {
+            color: var(--colorThird);
+            font-size: 12px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &-movielist {
+        &-item {
+            position: relative;
+            padding: 20px 15px;
+        }
+        &-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &-image {
+            min-width: 50px;
+            max-width: 50px;
+            max-height: 50px;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        &-title {
+            color: #fff;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        &-desc {
+            color: #9b9b9b;
+            span {
+                color: var(--colorThird);
+            }
+        }
+        &-showtimes {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            margin-left: -7px;
+            margin-right: -7px;
+            &-item {
+                flex: 0 0 25%;
+                max-width: 25%;
+                position: relative;
+                width: 100%;
+                padding-left: 7px;
+                padding-right: 7px;
+            }
+            &-content {
+                background-color: #233a50;
+                border: 1px solid #405266;
+                color: #abb7c4;
+                display: inline-block;
+                padding: 10px 0;
+                border-radius: 4px;
+                transition: all 0.4s ease-in-out;
+                font-weight: 600;
+                width: 100%;
+                text-align: center;
+                span {
+                    color: var(--colorSecondary);
+                    font-size: 16px;
+                }
+                label {
+                    margin-left: 7px;
+                    margin-right: 7px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .mvschedule {
+        &-location {
+            flex: 0 0 30%;
+            max-width: 30%;
+            border-left: none;
+            border-right: none;
+        }
+        &-movielist {
+            flex: 1;
+        }
+        &-cinema,
+        &-location,
+        &-movielist {
+            height: 650px;
+            overflow-y: auto;
+        }
+        &-cinema {
+            flex: 0 0 90px;
+            max-width: 90px;
+            &-item {
+                border-bottom: 1px solid #405266;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+
+    .booking {
+        &-cinema,
+        &-location {
+            display: flex;
+            flex-wrap: nowrap;
+            flex: 0 0 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            &::-webkit-scrollbar {
+                height: 0px;
+                &-thumb,
+                &-track {
+                    background-color: transparent;
+                }
+            }
+        }
+        &-cinema {
+            &-item {
+                min-width: 90px;
+            }
+        }
+        &-location {
+            border-top: none;
+            border-bottom: none;
+            &-item {
+                flex: 0 0 50%;
+                max-width: 100%;
+            }
+        }
+    }
+}

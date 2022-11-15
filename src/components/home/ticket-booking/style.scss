@@ -1,0 +1,54 @@
+.ticket-booking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1024px;
+    margin: auto;
+    height: 80px;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(80px);
+    z-index: 2;
+    padding-left: 20px;
+    padding-right: 20px;
+    &-group {
+        position: relative;
+        margin-right: 10px;
+        padding-right: 10px;
+        &::before {
+            background-color: #ccc;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 1px;
+        }
+    }
+    &-select {
+        border: none;
+        border-radius: 0;
+    }
+    &-action {
+        min-width: 130px;
+    }
+    &-button {
+        background-color: var(--colorThird);
+        color: #fff;
+        font-weight: 700;
+        margin-left: 20px;
+        padding: 11px 25px;
+        border-radius: 5px;
+        &.disable {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
